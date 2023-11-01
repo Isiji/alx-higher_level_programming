@@ -1,9 +1,4 @@
 #!/bin/bash
 
-if [ ! -f "$PYFILE" ] ; then
-    echo "PYFILE not set"
-    exit 1
-fi
-
-python3 $PYFILE
+python3 "$PYFILE"
 
