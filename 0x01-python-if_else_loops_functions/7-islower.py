@@ -7,7 +7,3 @@ def islower(c):
     else:
         return False
 
-input_char = 'b'
-result = islower(input_char)
-print(result)
-
