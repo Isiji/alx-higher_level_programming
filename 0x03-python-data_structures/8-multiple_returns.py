@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def multiple_returns(sentence):
     # Get the length of the sentence
     length = len(sentence)

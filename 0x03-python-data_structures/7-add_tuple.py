@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
     # Pad the tuples with zeros if they are smaller than 2
     tuple_a = tuple_a + (0, 0)
