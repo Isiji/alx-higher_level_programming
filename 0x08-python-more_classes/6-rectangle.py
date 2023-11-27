@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""creates a class"""
 class Rectangle:
     """defines a rectangle class"""
     instances = 0
