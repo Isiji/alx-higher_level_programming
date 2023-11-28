@@ -1,0 +1,45 @@
+this module defines an integer addition function "add_integer(a, b = 98)"
+
+Usage
+ >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(4, 3)
+    7
+
+::
+
+    >>> add_integer(2, -4)
+    -2
+
+The function also works with floating-point values.
+
+::
+
+    >>> add_integer(3.0, 3.0)
+    6
+
+Note that floats are casted to ints before addition is performed.
+
+::
+
+    >>> add_integer(2.9, 0.2)
+    2
+
+::
+
+    >>> add_integer(-2.5, -3.4)
+    -5
+
+Floating and non-floating point values can be combined.
+
+::
+
+    >>> add_integer(-2.5, -3)
+    -5
+
+The second argument is optional - by default, it is 98.
+
+::
+
+    >>> add_integer(5)
+    103
+
