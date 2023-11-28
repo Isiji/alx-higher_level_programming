@@ -12,6 +12,7 @@ class Rectangle:
 
     @property
     def width(self):
+        """sets the width of the rectangle"""
         return self.__width
 
     @width.setter
@@ -49,6 +50,17 @@ class Rectangle:
         perimeter = (self.__height + self.__height + self.__width + self.__width)
 
         return perimeter
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """returns the bigger rectangle. raises a type error when either rect1 or rect2 is not a rectangle"""
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return (rect_1)
+        return (rect_2)
+
     def __str__(self):
         """Return the printable representation of the Rectangle.
 

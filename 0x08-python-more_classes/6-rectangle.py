@@ -2,7 +2,9 @@
 """creates a class"""
 class Rectangle:
     """defines a rectangle class"""
+
     instances = 0
+
     def __init__(self, width=0, height=0):
         """initialise a new rectangle"""
         type(self).instances += 1
@@ -11,10 +13,12 @@ class Rectangle:
 
     @property
     def width(self):
+        """returns the width of the rectangle"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """completes the checks required for the width"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         elif value < 0:
