@@ -11,6 +11,7 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
         super().__init__(id)
+
     @property
     def width(self):
         """gets the width of the rectangle"""
@@ -20,9 +21,10 @@ class Rectangle(Base):
         """checks to see if width is an int and is greater than zero"""
         if type(value) != int:
             raise TypeError("width must me an integer")
-        if value <=0:
+        if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
+
     @property
     def height(self):
         """gets the height of the rectangle"""
@@ -42,11 +44,12 @@ class Rectangle(Base):
         return self.__x
     @x.setter
     def x(self, value):
-        """checks to see if the x is an int and is greater than zero"""
+        """checks to see if coordinate is greater than zero"""
         if type(value) != int:
             raise TypeError("x must be an integer")
-        if value <= 0:
-            raise ValueError("x must be > 0")
+
+        if value < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
 
     @property
@@ -58,7 +61,22 @@ class Rectangle(Base):
         """checks to see if y coordinate is an int and is greater than zero"""
         if type(value) != int:
             raise TypeError("y must be an integer")
+
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
 
+    def area(self):
+        """returns the area of the rectangle"""
+        return self.__width*self.__height
+
+    def display(self):
+        """that prints in stdout the Rectangle instance with the character #"""
+        if self.__width == 0 or self.__height == 0:
+            print("")
+            return
+        [print("") for y in range(self.__y)]
+        for h in range(self.__height):
+            [print(" ", end="") for x in range(self.x)]
+            [print("#", end="") for w in range(self.__width)]
+            print("")
