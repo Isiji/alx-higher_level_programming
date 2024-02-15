@@ -1,0 +1,1 @@
+vascript object and closures
