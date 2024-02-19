@@ -1,1 +1,0 @@
-in this chapter i am learning all about object relational mapping and how to coonect to the data base using mysql
